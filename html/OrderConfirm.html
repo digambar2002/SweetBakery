@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    
+    <script type="text/javascript">
+
+        
+        sendEmail();
+        function sendEmail() {
+            
+        let FirstName=localStorage.getItem("FirstName");
+        let LastName=localStorage.getItem("LastName");
+        let ProductName=localStorage.getItem("cakename");
+        let ProductType=localStorage.getItem("CakeType");
+        let ProductWeight=localStorage.getItem("Weight");
+        let ProductQuantity=localStorage.getItem("ProductQuantity");
+        let TotalPrice=localStorage.getItem("TotalPrice");
+        
+        // Email Variables
+        let CustomerEmailId=localStorage.getItem("EmailId")
+
+            
+            
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "",   // enter Email id
+                Password: "",   // Enter Password
+                To: CustomerEmailId,    // Variable Conataining Customer Email ID
+                From: "digambarchaudhari425303@gmail.com",
+                Subject: `Order Confirmation- Your ${ProductName} order has been Successfully Placed!`,
+                Body: `  <div style=" height: 100vh; padding: 40px; background: #e65c00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    " >
+     <div class="MailContainer" style="width: 80%; height: 80%; margin: 40px auto;  background-color: white;box-shadow: 0px 0px 30px 15px rgb(0, 0, 0,0.2);"  >
+         <div  style=" display: flex; background-image: linear-gradient( 109.6deg,  rgba(33,99,255,1) 11.2%, rgba(0,10,139,1) 100.2% );width: 100%; height: 12%; " >
+             <!-- <img src="https://1.bp.blogspot.com/-ZiahJyfsw14/X69kN3L_HjI/AAAAAAAAAgA/St3e99N6lpwKFlETHdbPgA2_PY9wrhAtACLcBGAsYHQ/s300/logo3%2B-%2BCopy.png" alt="logo2" style=" width: 25%; height: 100%; position: relative; margin: auto 1%; "> -->
+             <h1 style="color: white; padding: 5px; margin: auto 14px;  font-family: 'Great Vibes', cursive;" >Sweet Bakery</h1>
+             <h1 style="color: white; text-align: center; padding: 5px;  margin:auto; margin-left: 50%; font-size: 20px;"  >Order Placed!</h1>
+         </div>
+         <div  class="contain" style="padding: 40px;" >
+             <p>Dear ${FirstName} </p>
+             <p>Greetings from Sweet Bakery!</p>
+             <p>We thank you for your order. This email contains your order summary. Your item will be receive you within 4 to 5 hours. If You wnat to cancle this order you can cancle it within 1 hour. To cancle the order please call us on 1234567890. Thank You For Giving Your Love!</p>
+             <h4>Order Detail</h4>
+             <hr>
+             <span >Product Name:</span> <span style=" margin-left: 60%; padding: 1px;" >${ProductName}</span><br>
+             <span >Product Type: </span> <span style="margin-left: 68%;  padding: 8px; " >${ProductType}</span><br>
+             <span >Product Weight: </span> <span style="margin-left: 67%; padding: 4px;" >${ProductWeight}</span><br>
+             <span >Product Quantity: </span> <span style="margin-left: 66%; padding: 3px;" >${ProductQuantity}</span><br>
+             <hr>
+             <span >Total Price: </span> <span style="margin-left: 70%; padding: px;" >₹ ${TotalPrice}</span><br>
+         </div>
+ 
+     </div>
+    </div> `      
+                                    
+            }).then(
+                message => alert("Your Order Placed Sucessfully check Your Email ")
+                
+            ); 
+        
+        
+        }
+        
+        SendEmailToSweetShop()
+   function SendEmailToSweetShop() {
+           
+            // Customer Detail
+            let FirstName=localStorage.getItem("FirstName");
+          let LastName=localStorage.getItem("LastName");
+          let MobileNumber= localStorage.getItem("MobileNumber");
+          let Pincode= localStorage.getItem("PinCode");
+          let Adress= localStorage.getItem("Adress");
+          let EmailId=localStorage.getItem("EmailId")
+           //    product Detail
+          let ProductOrder=localStorage.getItem("cakename");
+          let ProductType=localStorage.getItem("CakeType");
+          let ProductWeight=localStorage.getItem("Weight");
+          let ProductQuantity=localStorage.getItem("ProductQuantity");
+          let TotalPrice=localStorage.getItem("TotalPrice");
+        
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "email Id Here",  // Enter Email ID to send email
+            Password: "PasswordHere",   // Enter Password
+            To: 'Email ID',             // Enter email id of your shop for receving email of order
+            From: "Email ID",           // Enter the same email id used in Username
+            Subject: `Order Confirmation- You get a new order of ${ProductOrder} !`,
+            Body: ` <div style=" height: 100vh; padding: 40px; background: #e65c00;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #F9D423, #e65c00);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #F9D423, #e65c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      " >
+       <div class="MailContainer" style="width: 80%; height: 90%; margin: 40px auto;  background-color: white;box-shadow: 0px 0px 30px 15px rgb(0, 0, 0,0.2);"  >
+           <div  style=" display: flex; background-image: linear-gradient( 109.6deg,  rgba(33,99,255,1) 11.2%, rgba(0,10,139,1) 100.2% );width: 100%; height: 12%; " >
+               <!-- <img src="https://1.bp.blogspot.com/-ZiahJyfsw14/X69kN3L_HjI/AAAAAAAAAgA/St3e99N6lpwKFlETHdbPgA2_PY9wrhAtACLcBGAsYHQ/s300/logo3%2B-%2BCopy.png" alt="logo2" style=" width: 25%; height: 100%; position: relative; margin: auto 1%; "> -->
+               <h1 style="color: white; padding: 5px; margin: auto 14px;  font-family: 'Great Vibes', cursive;" >Sweet Bakery</h1>
+               <h1 style="color: white; text-align: center; padding: 5px;  margin:auto; margin-left: 50%; font-size: 20px;"  >New Order!</h1>
+           </div>
+           <div  class="contain" style="padding: 40px;" >
+               <p>Dear Sir,</p>
+               <p>You have New order the details related to the order and customer are given below</p>
+               <h4>Order Detail</h4>
+               <hr>
+               <span >Product Name:</span> <span style=" margin-left: 60%; padding: 1px;" >${ProductOrder}</span><br>
+               <span >Product Type: </span> <span style="margin-left: 68%;  padding: 8px; " >${ProductType}</span><br>
+               <span >Product Weight: </span> <span style="margin-left: 67%; padding: 4px;" >${ProductWeight}</span><br>
+               <span >Product Quantity: </span> <span style="margin-left: 66%; padding: 3px;" >${ProductQuantity}</span><br>
+               <span >Total Price: </span> <span style="margin-left: 70%; padding: px;" >₹ ${TotalPrice}</span><br>
+               <hr>
+               <h4>Customer Detail</h4>
+               <span >Customer Name:</span> <span style=" margin-left: 55%; padding: 1px;" >${FirstName} ${LastName}
+              </span><br>
+               <span >Mobile Number: </span> <span style="margin-left: 55%;" >${MobileNumber}</span><br>
+               <span >Pincode: </span> <span style="margin-left: 60%;">${Pincode}</span><br>
+               <span >Adress: </span> <span style="margin-left: 60%;">${Adress}</span><br>
+               <span >Email Id: </span> <span style="margin-left: 60%;" >${EmailId}</span><br>
+           </div>
+   
+       </div>
+      </div> `
+        }).then(
+            
+        );
+   
+        Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Your work has been saved',
+  showConfirmButton: false,
+  timer: 1500
+})
+   function clearData(){
+       localStorage.clear()
+   }
+   
+    }
+    </script>
+    <link rel="stylesheet" href="../css/OrderConfirm.css">
+</head>
+<form action="../html/SweetBakery.html">
+<body>
+   <div class="container">
+       <div class="frame">
+           <img src="../img/Order-Placed-Icon.jpg" alt="">
+           <h1>Your Order Placed Sucessfully !</h1>
+           <h3>For More Details Please Check Your Email All the Information Related to Order Are Given in an Email</h3>
+          <input type="submit" id="back" value="Go Home" onclick="clearData()" >
+       </div>
+   </div>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery-Store</title>
+    <script src="../js/Product Detail.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Great+Vibes&family=Josefin+Sans:wght@500&family=PT+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monda&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Lobster&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/store.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+
+    <nav id="navigation">
+        <ul>
+            <li class="list"><a href="../html/SweetBakery.html">Home</a></li>
+            <li class="list"><a href="#">Store</a></li>
+            <!-- <li class="list"><a href="#gallary">Gallery</a></li> -->
+            <li class="list"><a href="../html/Services.html">Services</a></li>
+            <li class="list"><a href="../html/AboutUs.html">About us</a></li>
+            <li class="list"><a href="../html/ContactUs.html">Contact us</a></li>
+        </ul>
+
+        <div id="search" class="custom">
+            <img src="../img/search.png" alt="search">
+        </div>
+
+        <div id="cart" class="custom">
+            <img src="../img/cart1.png" alt="cart1">
+        </div>
+    </nav>
+
+
+
+    <!-- Store Section -->
+
+    <section id="store">
+
+       
+
+        <div id="cards">
+            
+                <div id="box1" class="boxcustom">
+                    <img src="../img/cakes/1512818056-chocolate-truffle-cream-cake-half-kg_1.jpg" alt="cupcake">
+
+                    <h2 id="cake1" class="subheading">Chocolate Truffle Cake</h2>
+
+                    <h3>400₹</h3>
+                    <p>We provide a variety of cupcakes for any party made with high-quality natural ingredients and no
+                        preservatives.</p>
+
+
+                    <div class="button_cont" align="center"><a onclick="productCake1()" class="example_c"
+                            href="../html/Product Detail.html" target="_blank"
+                            rel="nofollow noopener">Order Now</a>
+                    </div>
+
+                </div>
+        
+
+           
+                <div id="box2" class="boxcustom">
+                    <img src="../img/cakes/1568354590IMG_8064-250x250.jpg" alt="sweets">
+
+                    <h2 id="cake2" class="subheading">White Nectur Cake</h2>
+
+                    <h3>400₹</h3>
+                    <p>Nothing tastes better than a chocolate cake with a variety of flavors, which is always available
+                        at
+                        our bakery.</p>
+
+
+                    <div class="button_cont" align="center"><a onclick="productCake2()" class="example_c" href="../html/Product Detail.html" target="_blank"
+                            rel="nofollow noopener">Order Now</a></div>
+
+                </div>
+            
+            <div id="box3" class="boxcustom">
+                <img src="../img/cakes/1568357356IMG_7840-250x250.jpg" alt="sweets">
+
+                <h2 id="cake3" class="subheading">Couple Delight Cake</h2>
+
+                <h3>400₹</h3>
+                <p>Want to make your wedding unforgettable? Then you need to order a unique wedding cake at Sweet Shop !
+                </p>
+
+
+                <div class="button_cont" align="center"><a class="example_c" onclick="productCake3()" href="../html/Product Detail.html" target="_blank"
+                        rel="nofollow noopener">Order Now</a></div>
+
+            </div>
+
+
+    </section>
+
+</body>
+
+
+
+<!-- Script Containing Product Information and Store it in local storage -->
+
+<script>
+    let product1 = "Chocolate Truffle Cake"
+    let imagesrc1="../img/cakes/1512818056-chocolate-truffle-cream-cake-half-kg_1.jpg"
+    let check1=false;
+    function productCake1() {
+        localStorage.clear();
+        localStorage.setItem("cakename", product1);
+        localStorage.setItem("cakeimg1",imagesrc1)
+        check1=true;
+        localStorage.setItem("flag1",check1);
+        return false
+    }
+
+
+    let product2 = "White Nectur Cake"
+    let imagesrc2="../img/cakes/1568354590IMG_8064-250x250.jpg"
+    let check2=false;
+
+    
+    function productCake2() {
+        localStorage.clear();
+        localStorage.setItem("cakename", product2);
+        localStorage.setItem("cakeimg2",imagesrc2)
+        check2=true;
+        localStorage.setItem("flag2",check2);
+        return false
+    }
+    
+    let product3 = "Couple Delight Cake"
+    let imagesrc3="../img/cakes/1568357356IMG_7840-250x250.jpg"
+    let check3=false;
+
+    
+    function productCake3() {
+        localStorage.clear();
+        localStorage.setItem("cakename", product3);
+        localStorage.setItem("cakeimg3",imagesrc3)
+        check3=true;
+        localStorage.setItem("flag3",check3);
+        return false
+    }
+</script>
+
+</html>

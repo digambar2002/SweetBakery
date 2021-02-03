@@ -1,0 +1,190 @@
+/* default section */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+
+
+/*  Navigation Bar Section */ 
+
+/* Navigation Bar Section: Menue/List */
+#navigation{
+    display: flex;
+    height: 60px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+#navigation ul{
+    display: flex;
+    margin-top: 10px;
+    padding: 2px;
+}
+
+.list{
+    margin-left: 57px;
+    padding: 2px;
+    list-style: none;
+}
+.list a{
+    text-decoration: none;
+    color: #000000e6;
+    font-family: 'Baloo 2', cursive;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+.list a:hover{
+    
+    /* text-decoration: overline solid #ec0f6b; */
+    color: #ec0f6b;
+    text-decoration-thickness: 10px;
+}
+.list a:active{
+    text-decoration: overline solid #f81717;
+    
+}
+
+/*Navigation section: Cart and Search */
+#search img{
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 375px;
+}
+
+#search img:hover{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+ #cart img{
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 20px;
+}
+                    
+ #cart img:hover{
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+/* Section Gallary */
+/* main background gallary settings */
+
+#store{
+    height: 10405px;
+    width: 100%;
+    /* background:url('../img/background/4.jpg') center center; */
+    background-color: #f0f0f0e6;
+    background-size: cover;
+    border: 10px solid white;
+}
+#store h1{
+    margin-top: 0px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section Gallary: Cards Envelop */
+
+#cards{                 
+    display: flex;
+    flex-wrap: wrap;
+    margin: -35px 0px 0px 2px;
+}
+
+.boxcustom{
+    
+    border: 2px solid #ec0f6b;
+    height: 625px;
+    width: 377px;
+    display: block;
+    margin:60px 32px 54px 32px;
+    cursor: pointer;
+    position: inherit;
+}
+.boxcustom:hover{
+    box-shadow: 7px 7px 45px #750b0b;
+    background-color: white;
+    transition: all 0.1s ease 0s;
+}
+#box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#cards img{
+   
+    height: 50%;
+    width: 100%;
+    border: 10px solid white;
+}
+
+#cards h2{
+    margin: 30px 0px 0px 95px;
+}
+#cards p{
+    font-size: 1.1rem;
+    padding: 17px;
+    margin-top: 8px;
+    text-align: center;
+}
+#cards h3{
+    margin: 10px 0px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Buy Now Button */
+
+
+.example_c {background-image: linear-gradient(to right, #ff0084 0%, #33001b  51%, #ff0084  100%)}
+.example_c {
+    margin: 10px;
+    width: 230px;
+    height: 50px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 40px;
+    display: block;
+    text-decoration: none;
+ }
+
+ .example_c:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+
+ }
+#cards a{
+    display: block;    
+}
+
+
+
+/* All Page Headings Setting Section Is Here: */
+
+.subheading{
+    color: #750b0b;;
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    /* font-family: 'Monda', sans-serif; */
+}
+html{
+    scroll-behavior: smooth;
+}

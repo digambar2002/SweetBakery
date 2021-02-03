@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery-Check Out</title>
+    <link rel="stylesheet" href="../css/Check Out.css">
+</head>
+
+<body>
+    <form action="../html/OrderConfirm.html">
+    <div class="Container">
+        <div class="CheckOut">
+
+            <div class="Form">
+
+                <h1>Check Out</h1>
+                <hr>
+
+                <div class="wrapper">
+                     <h3>Customer Detail</h3>
+                    <div  class="input-data">
+                        <input id="FirstName" type="text" required>
+                        <div class="underline"></div>
+                        <label>First Name</label>
+                    </div>
+                    <div class="input-data">
+                        <input id="LastName" type="text" required>
+                        <div class="underline"></div>
+                        <label>Last Name</label>
+                    </div>
+                    <div class="input-data">
+                        <input id="MobileNumber" type="tel" pattern="[0-9]{10}" maxlength="10" required>
+                        <div class="underline"></div>
+                        <label>Mobile Number</label>
+                    </div>
+                    <div class="input-data">
+                        <input id="PinCode" type="tel" pattern="[0-9]{6}" maxlength="6" required>
+                        <div class="underline"></div>
+                        <label>Pin Code</label>
+                    </div>
+                    <div class="input-data">
+                        <input id="Adress" type="text" required>
+                        <div class="underline"></div>
+                        <label>Adress</label>
+                    </div>
+                    <div class="input-data">
+                        <input id="EmailId" type="email" required>
+                        <div class="underline"></div>
+                        <label>Email</label>
+                    </div>
+                
+                    <h3>Payment Method</h3>
+                   <div class="paymentoption">
+                       <p>We Only Provide Cash On Delivery Service For Our Valueable Customer</p>
+                   </div>
+
+                   <input id="PlaceOrderBtn" onclick="CustomerData()" type="submit" value="Place Order">
+                    
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script src="../js/CheckOut.js"></script>
+</html>

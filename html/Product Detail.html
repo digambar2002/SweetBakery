@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery-Product Detail</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/Product Detail.css">
+    
+</head>
+
+<body>
+   
+   <!-- Div of full page -->
+    <div id="wrapper">
+        
+       <!-- Div of Payment Box -->
+        <div class="payment">
+            
+            <!-- Two Parts of Payment Box  -->
+            <div class="payment_product">
+            </div>
+            <div class="payment_bill">
+                
+                <!-- Product Detail Name, Price -->
+                <h1>Product Detail</h1>
+                <hr>
+               
+                <div class="productid">
+                   
+                    <h3>Product Name</h3>
+                    <span ><img id="ProductImage" alt="cake"></span>
+                    <p id="productName" ></p>
+                </div>
+                
+                
+
+                <h3>Price per Kg</h3>
+                
+                <div class="totalRupee">
+                    <span id="rupeesign">₹</span>
+                    <span id="price"></span>
+
+                </div><br>
+
+                <h3>Select Weight</h3>
+                <p id="WeightErrorMessage" ></p>
+                <div id ="optionbtn" class="weightOption" name="myweight" onclick="WeightChange()" >
+                  
+                    <input type="radio" id="kg" name="weight" value="kg">
+                    <label for="kg">0.5 kg</label>
+
+                    <input type="radio" id="kg1" name="weight"  value="1 kg">
+                    <label for="kg1">1 kg</label>
+
+                    <input type="radio" id="kg2" name="weight" value="2 Kg">
+                    <label for="kg2">2 kg</label>
+
+                    <input type="radio" id="kg3" name="weight" value="3 Kg">
+                    <label for="kg3">3 kg</label>
+
+                    <input type="radio" id="kg4" name="weight" value="4 Kg">
+                    <label for="kg4">4 kg</label>
+
+                </div><br>
+                
+                <h3>Quantity</h3>
+                <div class="numspin" >
+                    <button class="minusBtn" disabled type="button">-</button>
+                    <input type="text"  id="quantity" value="1" onkeydown="return false">
+                    <button class="plusBtn"  type="button" >+</button>
+                </div>
+
+                <h3>Make it Eggless</h3>
+                <input type="checkbox" id="eggless" name="eggless" onclick="EglessOrNot()"> 
+                <label for="eggless">Make Cake Eggless No EXTRA Charge Applay</label><br>
+
+               <div id="buynow">
+                <input  type="submit" name="Buy Now" value="Buy Now" onclick="FormValidation()">
+               </div>
+                
+
+                <h3>Ingredent Use</h3>
+                <p>flour, sugar, butter, choclate, egg, fruits and etc. </p><br>
+
+                <h3>Product Description</h3> 
+                <p>Made with Fresh Whipped Cream and blends of Chocolate, Blackforest is the most sought-after cake
+                    flavour, and the all-time favorite of almost everyone. Send this freshly baked delicacy to your
+                    loved ones today. Suitable for Birthday, Anniversaries, and more occasions, etc.</p><br>
+
+                    
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/Product Detail.js"></script>
+</html>

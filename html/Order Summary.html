@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Bakery-Order Summary</title>
+    <link rel="stylesheet" href="../css/Order Summary.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+   <form action="../html/Check Out.html">
+    <div id="Container">
+        <div class="Payment">
+            <div class="ProductView">
+
+            </div>
+            <div class="ProductBill">
+                <h1>Order Summary</h1>
+                <hr>
+            
+
+                <div class="detail">
+                   <h3>Product Summary</h3>
+                    <ul>
+                        <li>
+                            <span>Product Name</span>
+                            <span id="ProductName" ></span>
+                        </li>
+                        <li>
+                            <span>Type</span>
+                            <span id="CakeType" ></span>
+                        </li>
+                        <li>
+                            <span>Weight</span>
+                            <span id="CakeWeight" ></span>
+                        </li>
+                        <li>
+                            <span>Quantity</span>
+                            <span id="Quantity" ></span>
+                        </li>
+                        
+                    </ul>
+                
+                    <h3>Price Detail</h3>
+                    <ul>
+                        <li>
+                            <span>Product Price</span>
+                            <span>₹ 400</span>
+                        </li>
+                        <li>
+                            <span>Weight Price (<span id="CakeWeightPrice"></span> <span>)</span></span>
+                            <span id="WeightPrice"></span>
+                        </li>
+                        <li>
+                            <span>Sub Total</span>
+                            <span>₹ <span id="SubTotal" ></span></span>
+                        </li>
+                        
+                        <li>
+                            <span>Total x <span id="TotalQuantity"></span><span> item</span></span>
+                            <span>₹ <span id="Total"></span></span>
+                            
+                        </li>
+                    </ul>
+                </div>
+                <input type="submit" class="CheckOutBtn" value="Check Out">
+               
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script src="../js/Order Summary.js"></script>
+
+</html>
